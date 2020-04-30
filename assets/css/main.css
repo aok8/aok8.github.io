@@ -85,7 +85,42 @@ input, select, textarea {
 		}
 
 	}
-
+	/* Something Special */
+	.modal{
+		position: fixed;
+		z-index: 10 !important;
+		left: 0;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		overflow: auto;
+		background-color: rgba(0, 0, 0, 0.5);
+		display:none;
+		animation-name: modalOpen;
+		animation-duration: 1s;
+	}
+	.modal-content{
+		background-color: #ffffff;
+		margin: 20% auto;
+		padding: 20px;
+		width:70%;
+		box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.25), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+		color: #000000;
+	}
+	.closeBtn{
+		color: #ccc;
+		float: right;
+		font-size: 30px;
+	}
+	.closeBtn:hover, .closeBtn:focus{
+		color:black;
+		text-decoration: none;
+		cursor: pointer;
+	}
+	@keyframes modalOpen{
+		from{opacity: 0}
+		to{opacity: 1}
+	}
 	html {
 		box-sizing: border-box;
 	}
@@ -1140,9 +1175,12 @@ input, select, textarea {
 			-ms-transition-delay: 0.75s;
 			transition-delay: 0.75s;
 			background-image: linear-gradient(to top, rgba(19, 21, 25, 0.5), rgba(19, 21, 25, 0.5)), url("../../images/overlay.png");
-			background-size: auto, 256px 256px;
-			background-position: center, center;
-			background-repeat: no-repeat, repeat;
+			background-size: auto,
+ 256px 256px;
+			background-position: center,
+ center;
+			background-repeat: no-repeat,
+ repeat;
 			z-index: 2;
 		}
 
